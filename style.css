@@ -1,0 +1,178 @@
+/* =========================
+   GLOBAL
+   ========================= */
+body {
+  font-family: "Metropolis", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, Arial, sans-serif;
+  background: #f5f9fc;
+  margin: 0;
+  padding: 24px;
+  color: #222;
+}
+
+/* =========================
+   HEADING
+   ========================= */
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+
+/* =========================
+   FILTER BAR
+   ========================= */
+.filter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.filter label {
+  font-weight: 500;
+  color: #444;
+}
+
+.filter select,
+.filter input[type="date"] {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.filter select:focus,
+.filter input:focus {
+  outline: none;
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 2px rgba(13, 110, 253, 0.15);
+}
+
+/* =========================
+   TIMETABLE WRAPPER
+   ========================= */
+#timetable {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* =========================
+   CARD BASE
+   ========================= */
+.card {
+  position: relative;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 16px;
+  padding: 18px 22px;
+  border-radius: 18px;
+  margin-bottom: 18px;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* =========================
+   TEXT STYLES
+   ========================= */
+.time {
+  font-size: 14px;
+  color: #555;
+  white-space: nowrap;
+}
+
+.subject {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.meta {
+  font-size: 14px;
+  color: #777;
+}
+
+/* =========================
+   FREE PERIOD – FULL CARD
+   ========================= */
+.card.free {
+  background: linear-gradient(135deg, #eaffea, #f3fff6);
+  border-left: 8px solid #2ecc71;
+}
+
+.card.free .subject {
+  color: #1e7e34;
+}
+
+.card.free .time {
+  color: #1e7e34;
+}
+
+.card.free .meta {
+  color: #4f8f5f;
+}
+
+/* =========================
+   CLASS PERIOD – FULL CARD
+   ========================= */
+.card.class {
+  background: linear-gradient(135deg, #eef5ff, #f7faff);
+  border-left: 8px solid #0d6efd;
+}
+
+.card.class .subject {
+  color: #0b3c91;
+}
+
+.card.class .time {
+  color: #0b3c91;
+}
+
+.card.class .meta {
+  color: #4a6fa5;
+}
+
+/* =========================
+   OPTIONAL: EVENT / EXAM
+   ========================= */
+.card.event {
+  background: linear-gradient(135deg, #fff6e5, #fffaf0);
+  border-left: 8px solid #f39c12;
+}
+
+.card.exam {
+  background: linear-gradient(135deg, #fdecea, #fff5f5);
+  border-left: 8px solid #e53935;
+  font-weight: 600;
+}
+
+/* =========================
+   NO DATA
+   ========================= */
+.no-data {
+  text-align: center;
+  font-size: 16px;
+  color: #888;
+  margin-top: 40px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+   ========================= */
+@media (max-width: 600px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+
+  .time {
+    font-weight: 500;
+  }
+}

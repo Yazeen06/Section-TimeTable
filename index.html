@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Section Timetable</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PAGE TITLE -->
+  <h1 id="pageTitle">Class Timetable</h1>
+
+  <!-- FILTER BAR -->
+  <div class="filter">
+    <label for="sectionPicker">Section:</label>
+    <select id="sectionPicker">
+      <!-- populated dynamically -->
+    </select>
+
+    <label for="datePicker">Date:</label>
+    <input type="date" id="datePicker" />
+  </div>
+
+  <!-- TIMETABLE OUTPUT -->
+  <div id="timetable"></div>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>
